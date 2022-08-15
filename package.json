@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bastion-multisig/wallet-adapter": "^0.2.8",
     "@jup-ag/react-hook": "2.0.0-beta.1",
     "@solana/spl-token-registry": "^0.2.298",
     "@solana/wallet-adapter-base": "^0.9.8",

@@ -21,6 +21,7 @@ import {
   TokenPocketWalletAdapter,
   SolletExtensionWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
+import { WalletConnectWalletAdapter } from "@bastion-multisig/wallet-adapter";
 import { useMemo } from "react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 
@@ -31,6 +32,7 @@ export function ClientWalletProvider(
 ): JSX.Element {
   const wallets = useMemo(
     () => [
+      new WalletConnectWalletAdapter({options: {}}),
       new BitKeepWalletAdapter(),
       new BitpieWalletAdapter(),
       new BloctoWalletAdapter(),
